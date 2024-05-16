@@ -1,0 +1,239 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.font{
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.background{
+  background-image: linear-gradient(to bottom, orange, purple);
+}
+.visability{
+    display: grid;
+}
+
+.fontsize{
+    font-size: 500%;
+    padding-left: auto;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 5px solid;
+    text-align: center;
+}
+
+.section_1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+.section_2{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+
+.section_4{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+.section_5{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+#toggle{
+    display: none;
+}
+
+.lbl{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    z-index: 100;
+}
+
+#toggle:checked ~ .chatbox{
+    bottom: 50px;
+    transition: all 1s ease;
+}
+
+.chatbox{
+    position: fixed;
+    bottom: -1100px;
+    right: 50px;
+
+    padding: 1em;
+    max-width: 25%;
+    transition: all 1s ease;
+
+    background-color:cornflowerblue;
+}
+
+.Border{
+    border-radius: 5px;
+    border: 2px;
+    border-style: dashed;
+    border-color: Black;
+    padding: 10px;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(111, 99, 99, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+}
+
+.register{
+    border: 1px solid red;
+    border-radius: 6px;
+    padding: 24px 30px;
+}
+
+.form-col-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+#togglle:checked ~ .chatboxesss{
+    top: 50px;
+    transition: all 1s ease;
+}
+
+#togglle{
+    display: none;
+}
+
+.chatboxesss{
+    position: fixed;
+    top: -400px;
+    right: 50px;
+
+    padding: 1em;
+    max-width: 25%;
+    transition: all 1s ease;
+}
+
+.lblbbbb{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    display: none;
+    z-index: 100;
+}
+
+
+.kvikun_b{
+    position: relative;
+    animation-name: texti;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes texti {
+    0%{left: -1200px;}
+    50%{left: 0px; }
+    75%{left: 0px; }
+    100%{left: 1200px;}
+}
+
+.kvikun_e{
+    animation-name: dodo;
+    animation-duration: 5s;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes dodo {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+@media screen and (max-width:650px) {
+    .section_1 {
+    grid-template-columns: 1fr;
+    }
+    .visability{
+        display: none;
+    }
+    .fontsize{
+        font-size: 500%;
+        padding-left: 0;
+    }
+    .header{
+        grid-template-columns: 1fr;
+    }
+    .section_4 {
+        grid-template-columns: 1fr;
+    }
+    .section_5 {
+        grid-template-columns: 1fr;
+    }
+    .lblbbbb{
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        display: block;
+        z-index: 100;
+    }
+    
+}
+
+@media screen and (max-width:650px) {
+    #toggle:checked ~ .chatbox{
+        bottom: -50px;
+        transition: all 1s ease;
+    }
+
+    .chatbox{
+        position: fixed;
+        bottom: -1500px;
+        right: 50px;
+
+        padding: 1em;
+        max-width: 75%;
+        transition: all 1s ease;
+
+        background-color:cornflowerblue;
+    }
+}
